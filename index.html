@@ -198,16 +198,35 @@ $(document).ready(function(){
 </script>
 
 <style>
-	video{
-        position: fixed; /* Stays in place when scrolling */
-        top: 50%;
+  body video{
+        position:fixed;
+        top: 70%;
         left: 50%;
-        transform: translate(-50%, -50%); /* Perfect center */
-        z-index: 9999; /* Ensure it stays on top */
+        transform: translate(-50%, -50%);
+        z-index: 9999;
 	border: 3px solid white;
         border-radius: 25px;
     }
+
+
+    /* Media query for small screens (mobile) */
+    @media (max-width: 600px) {
+        video{
+            width: 90vw;  /* 90% of viewport width */
+            height: 40vh; /* 40% of viewport height */
+       }
+    }
+
+    /* Media query for large screens */
+    @media (min-width: 1200px) {
+        video{
+            width: 40vw;
+            height: 60vh;
+            background-color: seagreen;
+        }
+    }
 </style>
+
 </head>
 <body>
 	<nav>
@@ -233,6 +252,7 @@ $(document).ready(function(){
 </video>
 
 </html>
+
 
 
 
