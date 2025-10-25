@@ -197,7 +197,19 @@ $(document).ready(function(){
 });
 </script>
 
-
+<swtyle>
+	<style>
+	video{
+        position: fixed; /* Stays in place when scrolling */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Perfect center */
+        z-index: 9999; /* Ensure it stays on top */
+	border: 3px solid white;
+        border-radius: 25px;
+    }
+</style>
+</swtyle>
 </head>
 <body>
 	<nav>
@@ -218,8 +230,12 @@ $(document).ready(function(){
 	<a href="pic" style="position:fixed;bottom: 0;">My image</a>
 </main>
 </body>
+<video width="640" height="360" style="vertical-align: middle;" controls autoplay loop muted>
+<source src="video.mp4" type="video/mp4">
+</video>
 
 </html>
+
 
 
 
